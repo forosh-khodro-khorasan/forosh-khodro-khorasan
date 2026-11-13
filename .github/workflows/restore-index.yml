@@ -1,0 +1,28 @@
+name: Restore index.html from history
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore v2 file as index.html
+        run: |
+          git config user.name "forosh-khodro-khorasan"
+          git config user.email "forosh-khodro-khorasan@users.noreply.github.com"
+          COMMIT=$(git log --all --format=%H --grep="Mobile template v2" | head -n 1)
+          echo "Source commit: $COMMIT"
+          git checkout "$COMMIT" -- frwsh-khwdrw-khrsn.html
+          ls -l frwsh-khwdrw-khrsn.html
+          rm -f index.html
+          mv frwsh-khwdrw-khrsn.html index.html
+          rm -f .github/workflows/restore-index.yml
+          git add -A
+          git status --short
+          ls -l index.html
+          git commit -m "Rename to index.html for Cloudflare Pages"
+          git push
