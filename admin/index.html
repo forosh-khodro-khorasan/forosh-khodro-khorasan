@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="color-scheme" content="light" />
+<title>مدیریت آگهی‌ها — فروش خودرو خراسان</title>
+<style>
+@font-face{font-family:'Noto Kufi Arabic';font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/NotoKufiArabic-arabic.woff2) format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1}
+@font-face{font-family:'Noto Kufi Arabic';font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/NotoKufiArabic-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Vazirmatn';font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/Vazirmatn-arabic.woff2) format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1}
+@font-face{font-family:'Vazirmatn';font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/Vazirmatn-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+:root{--bg:#fff;--surface:#fff;--surface2:#E9F1F7;--ink:#12263A;--ink-soft:#5A6B7C;--line:#DCE3E9;--teal:#12395B;--teal-deep:#0B2438;--gold:#C9A227;--ok:#1d7a3d;--err:#b3352b;--shadow:0 8px 24px rgba(18,57,91,.08)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",system-ui,sans-serif;line-height:1.8}
+h1,h2,h3{font-family:"Noto Kufi Arabic","Vazirmatn",sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 60px}
+header{border-bottom:3px solid var(--gold);padding-bottom:12px;margin-bottom:20px}
+header h1{margin:0;font-size:24px;color:var(--teal-deep)}
+header p{margin:4px 0 0;color:var(--ink-soft);font-size:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.card h2{margin:0 0 10px;font-size:18px;color:var(--teal-deep)}
+.card h3{margin:0 0 8px;font-size:16px}
+label{display:block;font-size:13.5px;font-weight:700;margin:10px 0 4px}
+input,select{width:100%;padding:9px 12px;border:1.5px solid var(--line);border-radius:9px;font-family:inherit;font-size:15px;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:2px solid var(--teal);outline-offset:1px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}}
+.btn{display:inline-block;padding:10px 22px;border-radius:10px;font-family:inherit;font-size:15px;font-weight:700;border:2px solid transparent;cursor:pointer;text-decoration:none}
+.btn.solid{background:var(--teal);color:#fff}
+.btn.ghost{background:#fff;border-color:var(--teal);color:var(--teal)}
+.btn.danger{background:#fff;border-color:var(--err);color:var(--err)}
+.btn:disabled{opacity:.55;cursor:wait}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+#msg{border-radius:10px;padding:12px 16px;margin-bottom:16px;font-weight:700;display:none}
+#msg.ok{display:block;background:#e7f4ec;color:var(--ok);border:1px solid #bfe0cb}
+#msg.err{display:block;background:#fbeae8;color:var(--err);border:1px solid #f0c4c0}
+#msg.info{display:block;background:var(--surface2);color:var(--teal-deep);border:1px solid var(--line)}
+.ad{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+.ad .top{display:flex;gap:12px;align-items:center}
+.ad img{width:96px;height:72px;object-fit:cover;border-radius:8px;flex:0 0 auto}
+.ad .ttl{font-weight:800}
+.ad .code{color:var(--ink-soft);font-size:13px}
+.badge{display:inline-block;background:var(--surface2);color:var(--teal-deep);border-radius:999px;padding:2px 10px;font-size:12.5px;font-weight:700}
+.badge.new{background:#fdf3d0;color:#7a5c00}
+.muted{color:var(--ink-soft);font-size:13.5px}
+ol.notes{margin:0;padding-inline-start:20px;line-height:2;font-size:14.5px}
+ol.notes li{margin-bottom:6px}
+#photo-preview{max-width:220px;border-radius:10px;margin-top:8px;display:none}
+details{margin-top:10px}
+details summary{cursor:pointer;font-weight:700;color:var(--teal-deep)}
+footer{margin-top:26px;color:var(--ink-soft);font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>مدیریت آگهی‌ها</h1>
+  <p>فروش خودرو خراسان — صفحه خصوصی؛ از سایت لینک نشده و در گوگل هم نمی‌آید.</p>
+</header>
+
+<div id="msg" role="status"></div>
+
+<section class="card" id="token-card">
+  <h2>۱ — توکن گیت‌هاب</h2>
+  <p class="muted">برای ذخیره تغییرها، یک توکن شخصی گیت‌هاب لازم است. توکن فقط در مرورگر همین دستگاه ذخیره می‌شود و فقط به <span dir="ltr">api.github.com</span> فرستاده می‌شود.</p>
+  <label for="token">توکن (Fine-grained personal access token)</label>
+  <input type="password" id="token" dir="ltr" placeholder="github_pat_…" autocomplete="off" />
+  <div class="btn-row">
+    <button type="button" class="btn solid" id="token-save">ذخیره توکن در همین مرورگر</button>
+    <button type="button" class="btn danger" id="token-forget">فراموش کردن توکن</button>
+  </div>
+  <p class="muted" id="token-state">توکن ذخیره نشده است.</p>
+  <details>
+    <summary>توکن را از کجا بگیرم؟</summary>
+    <ol class="notes">
+      <li>در گیت‌هاب (با همان حسابی که ریپوی سایت مال اوست) بروید: عکس پروفایل ← <span dir="ltr">Settings ← Developer settings ← Personal access tokens ← Fine-grained tokens ← Generate new token</span></li>
+      <li>فقط همین ریپو را انتخاب کنید: <span dir="ltr">forosh-khodro-khorasan / forosh-khodro-khorasan</span></li>
+      <li>در <span dir="ltr">Repository permissions</span> گزینه <span dir="ltr">Contents</span> را روی <span dir="ltr">Read and write</span> بگذارید و توکن را بسازید.</li>
+      <li>توکن را اینجا بچسبانید و «ذخیره توکن» را بزنید. توکن را برای هیچ‌کس نفرستید؛ اگر گوشی یا مرورگر عوض شد، توکن تازه بسازید و قبلی را در گیت‌هاب باطل کنید.</li>
+    </ol>
+  </details>
+</section>
+
+<section class="card">
+  <h2>۲ — آگهی‌های فعال</h2>
+  <p class="muted" id="ads-meta">در حال خواندن آگهی‌ها…</p>
+  <div id="ads-list"></div>
+</section>
+
+<section class="card">
+  <h2>۳ — افزودن آگهی تازه</h2>
+  <form id="add-form">
+    <div class="grid2">
+      <div><label for="add-name">نام خودرو *</label><input id="add-name" placeholder="مثلاً شاهین" /></div>
+      <div><label for="add-brand">برند *</label><select id="add-brand">
+        <option value="سایپا">سایپا</option><option value="پژو">پژو</option>
+        <option value="ایران‌خودرو">ایران‌خودرو</option><option value="هیوندای">هیوندای</option>
+        <option value="پیکان">پیکان</option><option value="بنلی">بنلی</option><option value="سایر">سایر</option>
+      </select></div>
+      <div><label for="add-year">مدل (سال ساخت) *</label><input id="add-year" type="number" inputmode="numeric" placeholder="۱۴۰۱" /></div>
+      <div><label for="add-km">کارکرد (کیلومتر)</label><input id="add-km" type="number" inputmode="numeric" placeholder="اگر کارکرد ندارد خالی بگذارید" /></div>
+      <div><label for="add-price">قیمت (میلیون تومان) *</label><input id="add-price" type="number" inputmode="numeric" placeholder="مثلاً ۲۴۹۹" /></div>
+      <div><label for="add-city">شهر (محل بازدید) *</label><input id="add-city" placeholder="مثلاً شیروان" /></div>
+      <div><label for="add-paint">وضعیت بدنه *</label><select id="add-paint">
+        <option>بدون رنگ</option><option>دور رنگ</option><option>رنگ‌شدگی</option><option>رنگ کامل</option><option>نامشخص</option>
+      </select></div>
+      <div><label for="add-status">وضعیت *</label><select id="add-status">
+        <option value="active">فعال</option><option value="sold">فروخته شد</option>
+      </select></div>
+    </div>
+    <label for="add-photo">عکس کاور آگهی (فایل عکس) *</label>
+    <input id="add-photo" type="file" accept="image/*" />
+    <img id="photo-preview" alt="پیش‌نمایش عکس" />
+    <div class="btn-row"><button type="submit" class="btn ghost">افزودن به لیست (هنوز ذخیره نشده)</button></div>
+    <p class="muted">آگهی تازه اول به لیست بالا اضافه می‌شود؛ ذخیره نهایی با دکمه «ذخیره همه تغییرات در گیت‌هاب» انجام می‌شود.</p>
+  </form>
+</section>
+
+<section class="card">
+  <h2>۴ — ذخیره</h2>
+  <div class="btn-row">
+    <button type="button" class="btn solid" id="save-all">ذخیره همه تغییرات در گیت‌هاب</button>
+    <button type="button" class="btn ghost" id="download-json">دانلود فایل JSON (روش دستی)</button>
+  </div>
+  <p class="muted">اگر ذخیره با خطا مواجه شد، با «دانلود فایل JSON» فایل را بگیرید و خودتان از صفحه گیت‌هاب (ریپو ← <span dir="ltr">Add file ← Upload files</span>) جایگزین <span dir="ltr">ads-data.json</span> کنید.</p>
+</section>
+
+<section class="card">
+  <h2>چند نکته مهم</h2>
+  <ol class="notes">
+    <li><b>قفل واقعی همین توکن است.</b> توکن فقط در مرورگر شما ذخیره می‌شود و فقط به <span dir="ltr">api.github.com</span> می‌رود. آن را با هیچ‌کس به اشتراک نگذارید.</li>
+    <li><b>این صفحه رمز عبور ندارد</b> — چون هر رمزی که روی صفحه نوشته شود در سورس صفحه دیده می‌شود و امنیت واقعی نیست. اگر کسی آدرس این صفحه را بداند ولی توکن شما را نداشته باشد، نمی‌تواند چیزی عوض کند. آدرس این صفحه در سایت لینک نشده و در گوگل هم نمی‌آید؛ با این حال قفل واقعی توکن است، نه پنهان بودن آدرس.</li>
+    <li><b>تغییرها همان لحظه روی سایت دیده می‌شوند</b> و در بازسازی روزانه ساعت ۱۵:۰۰ در صفحه ثابت سایت هم می‌نشینند.</li>
+    <li><b>این صفحه فقط داده آگهی‌ها</b> (قیمت، کارکرد، شهر، وضعیت بدنه، وضعیت) را عوض می‌کند؛ تغییر طراحی و چیدمان سایت همچنان با سازنده سایت است.</li>
+    <li>اگر آگهی‌ای را «فروخته شد» کنید، از لیست فعال‌ها می‌رود ولی در سوابق فروش سایت می‌ماند.</li>
+  </ol>
+</section>
+
+<footer>
+  <a href="../">← بازگشت به سایت فروش خودرو خراسان</a>
+</footer>
+</div>
+
+<script>
+"use strict";
+var REPO = "forosh-khodro-khorasan/forosh-khodro-khorasan";
+var BRANCH = "main";
+var API = "https://api.github.com/repos/" + REPO + "/contents/";
+var TOKEN_KEY = "fkh_admin_token";
+var PAINTS = ["بدون رنگ", "دور رنگ", "رنگ‌شدگی", "رنگ کامل", "نامشخص"];
+
+var state = null;          /* {updated, ads:[...]} — همان ads-data.json */
+var pendingPhotos = {};    /* id -> {ext, b64} برای آگهی‌های تازه */
+var saving = false;
+
+function $(id){ return document.getElementById(id); }
+function esc(s){
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+function faDigits(n){
+  return String(n).replace(/\d/g, function(d){ return "۰۱۲۳۴۵۶۷۸۹"[+d]; });
+}
+function faPrice(p){
+  p = Math.round(Number(p) || 0);
+  if (p >= 1000){
+    var b = Math.floor(p / 1000), r = p % 1000;
+    return faDigits(b) + " میلیارد" + (r ? " و " + faDigits(r) + " میلیون" : "") + " تومان";
+  }
+  return faDigits(p) + " میلیون تومان";
+}
+function faNum(n){ return Number(n).toLocaleString("fa-IR"); }
+function jalaliToday(){
+  try {
+    var parts = new Intl.DateTimeFormat("fa-IR", {year: "numeric", month: "2-digit", day: "2-digit"}).formatToParts(new Date());
+    var y = "", m = "", d = "";
+    parts.forEach(function(p){ if (p.type === "year") y = p.value; if (p.type === "month") m = p.value; if (p.type === "day") d = p.value; });
+    if (y && m && d) return y + "/" + m + "/" + d;
+  } catch (e) {}
+  return "";
+}
+function showMsg(text, kind){
+  var el = $("msg");
+  el.textContent = text;
+  el.className = kind || "info";
+  el.scrollIntoView({behavior: "smooth", block: "nearest"});
+}
+function getToken(){ try { return localStorage.getItem(TOKEN_KEY) || ""; } catch (e) { return ""; } }
+function refreshTokenState(){
+  $("token-state").textContent = getToken()
+    ? "توکن ذخیره شده است (در همین مرورگر). برای دیدن یا عوض کردن آن، توکن تازه را بچسبانید و دوباره ذخیره کنید."
+    : "توکن ذخیره نشده است.";
+}
+function b64encodeUnicode(str){
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function gh(path, method, body, token){
+  var headers = {
+    "Authorization": "Bearer " + token,
+    "Accept": "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+  var opts = {method: method || "GET", headers: headers};
+  if (body){ headers["Content-Type"] = "application/json"; opts.body = JSON.stringify(body); }
+  return fetch(API + path, opts).then(function(r){
+    return r.json().catch(function(){ return null; }).then(function(data){
+      if (!r.ok){
+        var m = (data && data.message) ? data.message : ("خطای " + r.status);
+        throw new Error(m + " (HTTP " + r.status + ")");
+      }
+      return data;
+    });
+  });
+}
+function getSha(path, token){
+  return gh(path + "?ref=" + BRANCH, "GET", null, token).then(function(d){
+    return (d && d.sha) || null;
+  }).catch(function(e){
+    if (String(e.message).indexOf("404") !== -1) return null;
+    throw e;
+  });
+}
+function putFile(path, b64, token, message){
+  return getSha(path, token).then(function(sha){
+    var body = {message: message, content: b64, branch: BRANCH};
+    if (sha) body.sha = sha;
+    return gh(path, "PUT", body, token);
+  });
+}
+
+/* ---------- خواندن و نمایش آگهی‌ها ---------- */
+function renderAds(){
+  var list = $("ads-list");
+  if (!state || !state.ads || !state.ads.length){
+    list.innerHTML = '<p class="muted">آگهی‌ای نیست.</p>';
+    $("ads-meta").textContent = "۰ آگهی";
+    return;
+  }
+  $("ads-meta").textContent = "آخرین به‌روزرسانی فایل: " + (state.updated || "—") + " — " + faDigits(state.ads.length) + " آگهی";
+  list.innerHTML = state.ads.map(function(a){
+    var isNew = !!a._new;
+    return '<div class="ad" data-id="' + a.id + '">' +
+      '<div class="top"><img src="../' + esc(a.cover || "") + '" alt="" onerror="this.style.visibility=\'hidden\'" />' +
+      '<div><div class="ttl">' + esc(a.name) + ' ' + faDigits(a.year) + '</div>' +
+      '<div class="code">کد FK-' + (100 + a.id) + ' — ' + esc(a.brandFa || "") + '</div>' +
+      (isNew ? ' <span class="badge new">تازه — هنوز ذخیره نشده</span>' : "") +
+      ' <span class="badge">' + (a.status === "sold" ? "فروخته شد" : "فعال") + '</span></div></div>' +
+      '<div class="grid2">' +
+      '<div><label>قیمت (میلیون تومان)</label><input type="number" inputmode="numeric" data-f="price" value="' + a.price + '" /></div>' +
+      '<div><label>کارکرد (کیلومتر)</label><input type="number" inputmode="numeric" data-f="km" value="' + (a.km == null ? "" : a.km) + '" placeholder="خالی = نامشخص" /></div>' +
+      '<div><label>شهر (محل بازدید)</label><input type="text" data-f="city" value="' + esc(a.city || "") + '" /></div>' +
+      '<div><label>وضعیت بدنه</label><select data-f="paint">' +
+        PAINTS.map(function(p){ return '<option' + (p === a.paint ? ' selected' : '') + '>' + p + '</option>'; }).join("") +
+      '</select></div>' +
+      '<div><label>وضعیت</label><select data-f="status">' +
+        '<option value="active"' + (a.status !== "sold" ? ' selected' : '') + '>فعال</option>' +
+        '<option value="sold"' + (a.status === "sold" ? ' selected' : '') + '>فروخته شد</option>' +
+      '</select></div>' +
+      '<div><label>قیمت به حروف (خودکار)</label><input type="text" value="' + esc(a.priceFa || faPrice(a.price)) + '" readonly /></div>' +
+      '</div></div>';
+  }).join("");
+  list.querySelectorAll(".ad").forEach(function(card){
+    var id = Number(card.getAttribute("data-id"));
+    card.querySelectorAll("[data-f]").forEach(function(inp){
+      inp.addEventListener("input", function(){
+        var f = inp.getAttribute("data-f");
+        var ad = null;
+        state.ads.forEach(function(x){ if (x.id === id) ad = x; });
+        if (!ad) return;
+        if (f === "price" || f === "km"){
+          var v = inp.value.trim() === "" ? null : Number(inp.value);
+          ad[f] = (f === "km") ? v : (v || 0);
+          if (f === "price"){
+            ad.priceFa = faPrice(ad.price);
+            var ro = card.querySelector('input[readonly]');
+            if (ro) ro.value = ad.priceFa;
+          }
+        } else {
+          ad[f] = inp.value;
+        }
+      });
+    });
+  });
+}
+function loadAds(){
+  return fetch("../ads-data.json", {cache: "no-store"}).then(function(r){
+    if (!r.ok) throw new Error("فایل ads-data.json روی سایت پیدا نشد (HTTP " + r.status + ")");
+    return r.json();
+  }).then(function(data){
+    if (!data || !Array.isArray(data.ads)) throw new Error("شکل فایل ads-data.json درست نیست");
+    state = data;
+    renderAds();
+  }).catch(function(e){
+    showMsg("آگهی‌ها خوانده نشدند: " + e.message + " — صفحه را تازه کنید؛ اگر فایل هنوز روی سایت نیست، اول باید نسخه تازه سایت (v40) منتشر شود.", "err");
+  });
+}
+
+/* ---------- افزودن آگهی ---------- */
+$("add-photo").addEventListener("change", function(){
+  var f = this.files && this.files[0];
+  var pv = $("photo-preview");
+  if (!f){ pv.style.display = "none"; pv.src = ""; return; }
+  var rd = new FileReader();
+  rd.onload = function(){ pv.src = rd.result; pv.style.display = "block"; };
+  rd.readAsDataURL(f);
+});
+$("add-form").addEventListener("submit", function(e){
+  e.preventDefault();
+  if (!state) { showMsg("اول باید آگهی‌ها خوانده شوند.", "err"); return; }
+  var name = $("add-name").value.trim();
+  var brandFa = $("add-brand").value;
+  var year = Number($("add-year").value);
+  var kmRaw = $("add-km").value.trim();
+  var km = kmRaw === "" ? null : Number(kmRaw);
+  var price = Number($("add-price").value);
+  var city = $("add-city").value.trim();
+  var paint = $("add-paint").value;
+  var status = $("add-status").value;
+  var file = $("add-photo").files && $("add-photo").files[0];
+  if (!name) return showMsg("نام خودرو را بنویسید.", "err");
+  if (!year || year < 1350 || year > 1410) return showMsg("مدل (سال ساخت) درست نیست.", "err");
+  if (!price || price <= 0) return showMsg("قیمت (میلیون تومان) را درست وارد کنید.", "err");
+  if (!city) return showMsg("شهر (محل بازدید) را بنویسید.", "err");
+  if (!file) return showMsg("عکس کاور آگهی را انتخاب کنید.", "err");
+  if (km !== null && (isNaN(km) || km < 0)) return showMsg("کارکرد درست نیست.", "err");
+  var maxId = 0;
+  state.ads.forEach(function(x){ if (x.id > maxId) maxId = x.id; });
+  var id = maxId + 1;
+  var ext = "jpg";
+  if (/png/i.test(file.type)) ext = "png";
+  else if (/webp/i.test(file.type)) ext = "webp";
+  var cover = "photos/ad-" + id + "-cover." + ext;
+  var rd = new FileReader();
+  rd.onload = function(){
+    var b64 = String(rd.result).split(",")[1] || "";
+    pendingPhotos[id] = {ext: ext, b64: b64};
+    state.ads.push({
+      id: id, name: name, brandFa: brandFa, year: year, km: km,
+      price: price, priceFa: faPrice(price), city: city, paint: paint,
+      status: status, cover: cover, _new: true
+    });
+    renderAds();
+    $("add-form").reset();
+    var pv = $("photo-preview"); pv.style.display = "none"; pv.src = "";
+    showMsg("آگهی «" + name + "» به لیست اضافه شد (کد FK-" + (100 + id) + "). برای نهایی شدن، «ذخیره همه تغییرات در گیت‌هاب» را بزنید.", "ok");
+  };
+  rd.onerror = function(){ showMsg("خواندن عکس ناموفق بود؛ دوباره انتخابش کنید.", "err"); };
+  rd.readAsDataURL(file);
+});
+
+/* ---------- توکن ---------- */
+$("token-save").addEventListener("click", function(){
+  var t = $("token").value.trim();
+  if (!t) return showMsg("اول توکن را در کادر بچسبانید.", "err");
+  try { localStorage.setItem(TOKEN_KEY, t); } catch (e) { return showMsg("ذخیره توکن در مرورگر ناموفق بود.", "err"); }
+  $("token").value = "";
+  refreshTokenState();
+  showMsg("توکن در همین مرورگر ذخیره شد.", "ok");
+});
+$("token-forget").addEventListener("click", function(){
+  try { localStorage.removeItem(TOKEN_KEY); } catch (e) {}
+  $("token").value = "";
+  refreshTokenState();
+  showMsg("توکن فراموش شد — از این مرورگر پاک شد. اگر می‌خواهید توکن دیگر جایی استفاده نشود، آن را در گیت‌هاب هم باطل کنید.", "info");
+});
+
+/* ---------- ذخیره همه ---------- */
+function cleanAds(){
+  return state.ads.map(function(a){
+    return {
+      id: a.id, name: a.name, brandFa: a.brandFa, year: a.year, km: a.km,
+      price: a.price, priceFa: a.priceFa, city: a.city, paint: a.paint,
+      status: a.status, cover: a.cover
+    };
+  });
+}
+$("save-all").addEventListener("click", function(){
+  if (saving) return;
+  if (!state) return showMsg("اول باید آگهی‌ها خوانده شوند.", "err");
+  var token = getToken();
+  if (!token) return showMsg("اول توکن گیت‌هاب را در بخش ۱ ذخیره کنید.", "err");
+  /* اعتبارسنجی ساده پیش از ارسال */
+  for (var i = 0; i < state.ads.length; i++){
+    var a = state.ads[i];
+    if (!a.name || !a.price || a.price <= 0 || !a.city || !a.year)
+      return showMsg("آگهی «" + (a.name || ("کد " + a.id)) + "» ناقص است (نام/قیمت/شهر/مدل را کامل کنید).", "err");
+  }
+  saving = true;
+  var btn = $("save-all");
+  btn.disabled = true;
+  btn.textContent = "در حال ذخیره…";
+  showMsg("در حال ذخیره…", "info");
+  var newAds = state.ads.filter(function(a){ return pendingPhotos[a.id]; });
+  var chain = Promise.resolve();
+  newAds.forEach(function(a){
+    chain = chain.then(function(){
+      var p = pendingPhotos[a.id];
+      return putFile(a.cover, p.b64, token, "admin: upload cover " + a.cover);
+    });
+  });
+  chain.then(function(){
+    var out = {updated: jalaliToday() || state.updated, ads: cleanAds()};
+    var content = b64encodeUnicode(JSON.stringify(out, null, 2));
+    return putFile("ads-data.json", content, token, "admin: update ads-data.json (" + (out.updated || "") + ")");
+  }).then(function(res){
+    state.updated = jalaliToday() || state.updated;
+    state.ads.forEach(function(a){ delete a._new; });
+    pendingPhotos = {};
+    renderAds();
+    var sha = (res && res.commit && res.commit.sha) ? String(res.commit.sha).slice(0, 7) : "";
+    showMsg("ذخیره شد ✓ — فایل ads-data.json در گیت‌هاب به‌روز شد" + (sha ? " (کامیت " + sha + ")" : "") + ". تغییرها همان لحظه روی سایت دیده می‌شوند و در بازسازی روزانه هم در صفحه ثابت می‌نشینند.", "ok");
+  }).catch(function(e){
+    var m = String(e.message || e);
+    var hint = "";
+    if (m.indexOf("401") !== -1) hint = " توکن درست نیست یا منقضی شده؛ توکن تازه بسازید.";
+    else if (m.indexOf("403") !== -1) hint = " توکن به این ریپو دسترسی ندارد؛ در ساخت توکن، همین ریپو و دسترسی Contents روی Read and write را چک کنید.";
+    else if (m.indexOf("404") !== -1) hint = " ریپو یا فایل پیدا نشد؛ نام ریپو را چک کنید.";
+    showMsg("ذخیره ناموفق بود: " + m + "." + hint + " اگر نشد، با «دانلود فایل JSON» فایل را بگیرید و دستی آپلود کنید.", "err");
+  }).then(function(){
+    saving = false;
+    btn.disabled = false;
+    btn.textContent = "ذخیره همه تغییرات در گیت‌هاب";
+  });
+});
+
+/* ---------- دانلود دستی ---------- */
+$("download-json").addEventListener("click", function(){
+  if (!state) return showMsg("اول باید آگهی‌ها خوانده شوند.", "err");
+  var out = {updated: jalaliToday() || state.updated, ads: cleanAds()};
+  var blob = new Blob([JSON.stringify(out, null, 2)], {type: "application/json;charset=utf-8"});
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "ads-data.json";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  showMsg("فایل ads-data.json دانلود شد — آن را از صفحه گیت‌هاب (ریپو ← Add file ← Upload files) جایگزین فایل قبلی کنید.", "info");
+});
+
+refreshTokenState();
+loadAds();
+</script>
+</body>
+</html>
